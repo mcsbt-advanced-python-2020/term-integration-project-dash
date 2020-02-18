@@ -2,7 +2,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-from flask import Flask, render_template
+from flask import Flask, render_template, session
 import pandas as pd
 
 
@@ -10,7 +10,7 @@ server = Flask(__name__)
 
 @server.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", session = session)
 
 app = dash.Dash(
     __name__,

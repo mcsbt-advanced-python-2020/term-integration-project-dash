@@ -4,7 +4,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import pandas as pd
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=["http://localhost:8050/stylesheet.css"])
 
 df = pd.read_csv("firemen.csv")
 
@@ -38,8 +38,6 @@ def update_fires_graph(districts, months_selected):
     current_months = [months[n] for n in range(months_selected[0], months_selected[1] + 1)]
 
     filtered = df[df["DISTRITO"].isin(districts) & df["MES"].isin(current_months)]
-
-    print(filtered)
 
     data = []
 

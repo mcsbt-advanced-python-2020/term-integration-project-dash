@@ -6,6 +6,8 @@
     </head>
     <body>
         <h1>This is rendered by the flask app</h1>
+        {% if session.username %}
         <iframe frameborder="0" src="http://localhost:8050/dash" width="800" height="600"></iframe>
+        {% endif %}
     </body>
 </html>
