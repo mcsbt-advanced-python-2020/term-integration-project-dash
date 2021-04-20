@@ -32,7 +32,7 @@ parso==0.6.1
 phonenumbers==8.11.4
 plotly==4.5.0
 pluggy==0.13.0
-py==1.8.0
+py==1.10.0
 pylint==2.4.4
 pyparsing==2.4.5
 pytest==5.2.4
